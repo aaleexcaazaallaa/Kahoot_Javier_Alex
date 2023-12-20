@@ -16,9 +16,10 @@ class ConfiguracionPreguntas : AppCompatActivity() {
     val app = KahootApp
 
     private lateinit var edPregunta: EditText
-    private lateinit var edOpcionErronea1: EditText
-    private lateinit var edOpcionErronea2: EditText
-    private lateinit var edOpcionErronea3: EditText
+    private lateinit var edOpcion1: EditText
+    private lateinit var edOpcion2: EditText
+    private lateinit var edOpcion3: EditText
+    private lateinit var edOpcion4: EditText
     private lateinit var edOpcionCorrecta: EditText
     private lateinit var btnGuardarPregunta: Button
     private lateinit var btnVolver: Button
@@ -37,16 +38,19 @@ class ConfiguracionPreguntas : AppCompatActivity() {
 
     private fun guardarPregunta() {
         val pregunta = edPregunta.text.toString()
-        val opcionErronea1 = edOpcionErronea1.text.toString()
-        val opcionErronea2 = edOpcionErronea2.text.toString()
-        val opcionErronea3 = edOpcionErronea3.text.toString()
+        val opcion1 = edOpcion1.text.toString()
+        val opcion2 = edOpcion2.text.toString()
+        val opcion3 = edOpcion3.text.toString()
+        val opcion4 = edOpcion4.text.toString()
         val opcionCorrecta = edOpcionCorrecta.text.toString()
 
-        if (pregunta.isEmpty() || opcionErronea1.isEmpty() || opcionErronea2.isEmpty() || opcionErronea3.isEmpty() || opcionCorrecta.isEmpty()) {
+        if (pregunta.isEmpty() || opcion1.isEmpty() || opcion2.isEmpty() || opcion3.isEmpty() || opcion4.isEmpty() || opcionCorrecta.isEmpty()) {
             Toast.makeText(this, "Aun quedan campos por rellenar", Toast.LENGTH_LONG).show()
+        } else if (!opcionCorrecta.equals(opcion1) && !opcionCorrecta.equals(opcion2) && !opcionCorrecta.equals(opcion3) && !opcionCorrecta.equals(opcion4)) {
+            Toast.makeText(this, "Esa opcion no puede ser una respuesta correcta", Toast.LENGTH_LONG).show()
         } else {
             lifecycleScope.launch {
-                val preguntaGuardada = Kahoot(pregunta = pregunta, primera_respuesta = opcionErronea1, segunda_respuesta = opcionErronea2, tercera_respuesta = opcionErronea3, cuarta_respuesta = opcionCorrecta)
+                val preguntaGuardada = Kahoot(pregunta = pregunta, primera_respuesta = opcion1, segunda_respuesta = opcion2, tercera_respuesta = opcion3, cuarta_respuesta = opcion4, respuesta_correcta = opcionCorrecta)
                 val preguntasList: List<Kahoot> = listOf(preguntaGuardada)
                 app.room.kahootDao().insertKahoot(preguntasList)
                 Log.e("valor", "$preguntaGuardada")
@@ -59,18 +63,20 @@ class ConfiguracionPreguntas : AppCompatActivity() {
 
     private fun clearEditText() {
         edPregunta.setText("")
-        edOpcionErronea1.setText("")
-        edOpcionErronea2.setText("")
-        edOpcionErronea3.setText("")
+        edOpcion1.setText("")
+        edOpcion2.setText("")
+        edOpcion3.setText("")
+        edOpcion4.setText("")
         edOpcionCorrecta.setText("")
         edPregunta.requestFocus()
     }
 
     private fun initView() {
         edPregunta = findViewById(R.id.edPregunta)
-        edOpcionErronea1 = findViewById(R.id.edOpcionErronea1)
-        edOpcionErronea2 = findViewById(R.id.edOpcionErronea2)
-        edOpcionErronea3 = findViewById(R.id.edOpcionErronea3)
+        edOpcion1 = findViewById(R.id.edOpcion1)
+        edOpcion2 = findViewById(R.id.edOpcion2)
+        edOpcion3 = findViewById(R.id.edOpcion3)
+        edOpcion4 = findViewById(R.id.edOpcion4)
         edOpcionCorrecta = findViewById(R.id.edOpcionCorrecta)
         btnGuardarPregunta = findViewById(R.id.btnGuardarPregunta)
         btnVolver = findViewById(R.id.btnVolver)

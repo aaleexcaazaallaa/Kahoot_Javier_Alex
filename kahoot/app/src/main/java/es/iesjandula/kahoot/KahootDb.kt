@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [Kahoot::class],
-    version = 1
+    version = 2
 )
 abstract class KahootDb: RoomDatabase() {
     abstract fun kahootDao(): KahootDao

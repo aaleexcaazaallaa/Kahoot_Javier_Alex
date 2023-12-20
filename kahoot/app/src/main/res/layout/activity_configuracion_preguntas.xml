@@ -40,34 +40,56 @@
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/edOpcionErronea1"
+        android:id="@+id/edOpcion1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:hint="Opcion Erronea"
+        android:hint="Opcion 1"
         android:textStyle="italic"/>
 
     <EditText
-        android:id="@+id/edOpcionErronea2"
+        android:id="@+id/edOpcion2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:hint="Opcion Erronea"
+        android:hint="Opcion 2"
         android:textStyle="italic"/>
 
     <EditText
-        android:id="@+id/edOpcionErronea3"
+        android:id="@+id/edOpcion3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:hint="Opcion Erronea"
+        android:hint="Opcion 3"
         android:textStyle="italic"/>
+
+    <EditText
+        android:id="@+id/edOpcion4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Opcion 4"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16sp"
+        android:layout_marginBottom="16sp"
+        android:text="INTRODUCE LA OPCION CORRECTA"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/edOpcionCorrecta"

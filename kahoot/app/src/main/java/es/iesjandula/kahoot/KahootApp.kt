@@ -11,6 +11,6 @@ class KahootApp: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        room = Room.databaseBuilder(applicationContext, KahootDb::class.java, "kahoot").build()
+        room = Room.databaseBuilder(applicationContext, KahootDb::class.java, "kahoot").fallbackToDestructiveMigration().build()
     }
 }
