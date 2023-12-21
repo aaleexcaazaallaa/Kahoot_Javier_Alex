@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Kahoot")
 data class Kahoot(
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id_numPregunta") var id_numPregunta : Long = 0,
+    @ColumnInfo(name = "id_numPregunta") var id_numPregunta: Long=0,
     @ColumnInfo(name = "pregunta") val pregunta: String,
     @ColumnInfo(name = "primera_respuesta") val primera_respuesta: String,
     @ColumnInfo(name = "segunda_respuesta") val segunda_respuesta: String,
