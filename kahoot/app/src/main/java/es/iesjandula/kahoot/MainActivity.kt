@@ -22,12 +22,12 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.ConfiguracionPreguntas -> {
-                val intentNuevoAlumno = Intent(this, ConfiguracionPreguntas::class.java)
-                startActivity(intentNuevoAlumno)
+                val intentCofigurarPregs = Intent(this, ConfiguracionPreguntas::class.java)
+                startActivity(intentCofigurarPregs)
             }
             R.id.Jugar -> {
-                val intentNuevoAlumno = Intent(this, JugarScreen::class.java)
-                startActivity(intentNuevoAlumno)
+                val intentJugar = Intent(this, JugarScreen::class.java)
+                startActivity(intentJugar)
             }
         }
         return super.onOptionsItemSelected(item)
