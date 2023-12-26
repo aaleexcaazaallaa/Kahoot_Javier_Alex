@@ -25,6 +25,10 @@ class MainActivity : AppCompatActivity() {
                 val intentNuevoAlumno = Intent(this, ConfiguracionPreguntas::class.java)
                 startActivity(intentNuevoAlumno)
             }
+            R.id.Jugar -> {
+                val intentNuevoAlumno = Intent(this, JugarScreen::class.java)
+                startActivity(intentNuevoAlumno)
+            }
         }
         return super.onOptionsItemSelected(item)
     }

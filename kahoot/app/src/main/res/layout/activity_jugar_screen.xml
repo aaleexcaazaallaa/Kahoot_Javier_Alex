@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".JugarScreen">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/MostrarPreguntaCardView"
+        android:layout_width="344dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/PreguntaTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pregunta"
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            ></TextView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="150dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Respuesta1"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="56dp"
+                android:backgroundTint="@color/btn1"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="402dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Respuesta2"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="56dp"
+                android:backgroundTint="@color/btn2"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="402dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Respuesta3"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="56dp"
+                android:backgroundTint="@color/btn3"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="402dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Respuesta4"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="56dp"
+                android:backgroundTint="@color/btn4"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="402dp" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

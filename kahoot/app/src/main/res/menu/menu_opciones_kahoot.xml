@@ -5,4 +5,8 @@
         android:title="Configuración de preguntas"
         app:showAsAction="never">
     </item>
+    <item android:id="@+id/Jugar"
+        android:title="Jugar"
+        app:showAsAction="never">
+    </item>
 </menu>
