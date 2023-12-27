@@ -55,6 +55,16 @@ class ConfiguracionPreguntas : AppCompatActivity() {
                 app.room.kahootDao().insertKahoot(preguntasList)
                 Log.e("valor", "$preguntaGuardada")
             }
+
+            val intent = Intent(this, JugarScreen::class.java)
+            intent.putExtra("pregunta", pregunta)
+            intent.putExtra("opcion1", opcion1)
+            intent.putExtra("opcion2", opcion2)
+            intent.putExtra("opcion3", opcion3)
+            intent.putExtra("opcion4", opcion4)
+            intent.putExtra("opcionCorrecta", opcionCorrecta)
+            startActivity(intent)
+
             Toast.makeText(this, "Pregunta guardada con exito", Toast.LENGTH_LONG).show()
             clearEditText()
         }

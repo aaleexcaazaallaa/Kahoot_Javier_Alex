@@ -10,7 +10,7 @@ import androidx.room.Update
 interface KahootDao {
 
     @Query("Select * From Kahoot")
-    suspend fun getKahoot(): List<Kahoot>
+    suspend fun getKahoot(): MutableList<Kahoot>
 
     @Update
     suspend fun updateKahoot(kahoot: Kahoot)
